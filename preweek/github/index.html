@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Git & GitHub Setup - OceanHackWeek Resources</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link href="../../extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Git & GitHub Setup";
+    var mkdocs_page_input_path = "preweek/github.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> OceanHackWeek Resources</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Overview</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../conduct/">Code of Conduct</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../logistics/">Logistics</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../schedule/">Schedule</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Hack Projects</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../projects/overview/">Project Overview</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../projects/steps/">Hacking at OHW20</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Pre-event Preparation</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../python/">Python Requirements</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Git & GitHub Setup</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#getting-setup-with-git-and-github">Getting setup with Git and GitHub</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#getting-started-with-bash">Getting started with Bash</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#command-line-editor">Command line editor</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">OceanHackWeek Resources</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Pre-event Preparation &raquo;</li>
+        
+      
+    
+    <li>Git & GitHub Setup</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/oceanhackweek/ohw-learning-resources/edit/master/docs/preweek/github.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="git-github-setup">Git &amp; GitHub Setup</h1>
+<p><strong>REVIEW THIS AND COMBINE WITH GIT AND GITHUB MATERIALS IN THE TEMPLATE</strong></p>
+<h2 id="getting-setup-with-git-and-github">Getting setup with Git and GitHub</h2>
+<p>We will use Git and Github for collaborative work. Be sure to arrive at Oceanhackweek with your own <a href="https://github.com/">GitHub</a> account.</p>
+<p><strong>Git Installation</strong></p>
+<ul>
+<li>Windows</li>
+<li>
+<p>You need to install Git for Windows from this <a href="https://gitforwindows.org/">link</a>. For more setup details follow these <a href="https://carpentries.github.io/workshop-template/#shell">instructions</a></p>
+</li>
+<li>
+<p>MAC OS</p>
+</li>
+<li>
+<p>Download the <a href="https://git-scm.com/download/mac">git installer</a> and run it.</p>
+</li>
+<li>
+<p>Linux (Debian)</p>
+</li>
+</ul>
+<p><code>sudo apt install git-all</code></p>
+<p>To test open the terminal (on Windows Git Bash) and setup your username and email:</p>
+<p><code>git config --global user.name "your username"
+    git config --global user.email "your email"</code></p>
+<h2 id="getting-started-with-bash">Getting started with Bash</h2>
+<p>During the hackweek it will be useful to know how to navigate between files from the command line. If you are not familiar with the unix shell commands you can review the first three sections of this <a href="https://swcarpentry.github.io/shell-novice/">Software Carpentry Shell Novice</a> lesson. On Windows, use the Git Bash terminal to run these commands.</p>
+<h2 id="command-line-editor">Command line editor</h2>
+<p>When working on the command line, it is often handy to modify file content directly from there. For that you can use a command line editor such as <code>nano</code>. On Mac and Linux it is usually pre-installed, but for Windows you can follow the instructions in this <a href="http://carpentries.github.io/workshop-template/#editor">link</a> to set it up. Test your installation by opening a terminal and running <code>nano --version</code>. If it works you can link your github with nano:</p>
+<pre><code>git config --global core.editor &quot;nano -w&quot;
+</code></pre>
+
+<h2 id="resources">Resources</h2>
+<p>Git and GitHub are very powerful tools but no doubt the learning curve is steep. Although we will cover some of the basics at Oceanhackweek, learning is an iterative process so below we list some resources which can help you be better prepared:</p>
+<p><a href="https://www.youtube.com/watch?v=w3jLJU7DT5E">What is GitHub?</a> (3:45 min)</p>
+<p><a href="https://www.youtube.com/watch?v=Bc5BO9gPC9w&amp;feature=youtu.be">CUAHSI Tutorial</a> (1 hour)</p>
+<p><a href="http://swcarpentry.github.io/git-novice/">Software Carpentry Lesson</a> (3 hours with exercises)</p>
+<p><a href="https://lab.github.com/">GitHub Learning Lab</a>: practice with a bot! (On your own pace)</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../python/" class="btn btn-neutral" title="Python Requirements"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/oceanhackweek/ohw-learning-resources/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../python/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
