@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Conda - OceanHackWeek Resources</title>
+  <title>Conda and installing Python and R environments - OceanHackWeek Resources</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../../css/theme.css" />
@@ -19,8 +19,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Conda";
-    var mkdocs_page_input_path = "tutorials/conda.md";
+    var mkdocs_page_name = "Conda and installing Python and R environments";
+    var mkdocs_page_input_path = "prep/conda_original.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -66,43 +66,17 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Pre-event Preparation</span></p>
-                <ul class="current">
-                    <li class="toctree-l1"><a class="reference internal" href="../../preweek/github/">Git & GitHub Setup</a>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../git/">Git</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../github/">GitHub</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../git/">git</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../jupyterhub/">Jupyter</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../preweek/python/">Python Requirements</a>
-                    </li>
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Conda</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#python-software">Python Software</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#what-is-conda">What is Conda?</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#installing-miniconda">Installing Miniconda</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#linux-and-osx">Linux and OSX</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#installing-anaconda-optional">Installing Anaconda (Optional)</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#installing-python">Installing Python</a>
-    </li>
-    </ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../jupyterhub/">Jupyter and the Hub</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Tutorials</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../github/">Data Access in Python</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../tutorials/getting_started/">Getting Started</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Projects</span></p>
@@ -132,15 +106,11 @@
     <li><a href="../..">Docs</a> &raquo;</li>
     
       
-        
-          <li>Pre-event Preparation &raquo;</li>
-        
-      
     
-    <li>Conda</li>
+    <li>Conda and installing Python and R environments</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/oceanhackweek/ohw-resources/edit/master/docs/tutorials/conda.md"
+        <a href="https://github.com/oceanhackweek/ohw-resources/edit/master/docs/prep/conda_original.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -151,15 +121,20 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="conda-basics">Conda Basics</h1>
+                <h1 id="conda-and-installing-python-and-r-environments">Conda and installing Python and R environments</h1>
 <h3 id="overview">Overview</h3>
+<h3 id="what-is-conda">What is Conda?</h3>
+<p><a href="http://conda.pydata.org/docs/"><strong>Conda</strong></a> is an <strong>open source <code>package</code> and <code>environment</code> management system for any programming languages, but very popular among python community,</strong></p>
+<p>The Hub is pre-configured with a customized "environment" of Python and R packages designed to run all the tutorial notebooks, and supporting a broad range of oceanographic applications. This environment is created and managed using the open-source <a href="https://docs.conda.io"><strong>Conda</strong> package and environment management system</a> for installing multiple versions of software packages together with their dependencies, and convenient switching between environments. Conda runs on Windows, macOS, and Linux: <em>"Conda quickly installs, runs, and updates packages and their dependencies. Conda easily creates, saves, loads, and switches between environments on your local computer. It was created for Python programs but it can package and distribute software for any language."</em></p>
+<p>Conda may be used on your computer as well as the Hub ...</p>
+<p>https://github.com/oceanhackweek/ohw20-tutorials/blob/master/environment.yml</p>
+<p>For Python, the advantage of conda compared to <code>pip</code> is that it has a built in environment management system as well as the management of binaries, and non-Python dependencies.</p>
+<p>You do not need administrative or root permissions to install conda if you select a user-writable installation location.</p>
 <p>In the previous lesson we showed you a cloud-based environment for our work during the hackweek. What happens after the event when you want to go home and work with all the libraries we showed you? You will likely also want to have a functioning version of Python on your local laptop if that is not already in place. So this lesson takes you through our recommended procedure for doing that. We suggest you get this set up in advance so that we can help you troubleshoot when you arrive.</p>
 <h3 id="python-software">Python Software</h3>
 <p>Python software is distributed as a series of <em>libraries</em> that are called within your code to perform certain tasks. There are many different collections, or <em>distributions</em> of Python software. Generally you install a specific distribution of Python and then add additional libraries as you need them. There are also several different <em>versions</em> of Python. The two main versions right now are 2.7 and 3.7, although Python 2.7 will not be supported past 2020. Some libraries only work with specific versions of Python.</p>
 <p>So even though Python is one of the most adaptable, easy-to-use software systems, you can see there are still complexities to work out and potential challenges when delivering content to a large group. Therefore we have a number of different ways that we are trying to simplify this process to maximize your learning during the hackweek.</p>
 <p>We also provide instructions for using <a href="https://www.continuum.io">Anaconda</a>, which is our recommended Python distribution, for installing and working with Python on your local computer. We can assist in setting up "conda" environments that will simplify the gathering of Python libraries and version specific to the tutorial you are working on.</p>
-<h3 id="what-is-conda">What is Conda?</h3>
-<p><a href="http://conda.pydata.org/docs/"><strong>Conda</strong></a> is an <strong>open source <code>package</code> and <code>environment</code> management system for any programming languages, but very popular among python community,</strong> for installing multiple versions of software packages, their dependencies and switching easily between them. It works on Linux, OS X and Windows.</p>
 <h3 id="installing-miniconda">Installing Miniconda</h3>
 <h5 id="windows">Windows</h5>
 <p>Click <a href="http://conda.pydata.org/miniconda.html">here</a> to download the proper installer for your Windows platform (64 bits).
@@ -213,15 +188,6 @@ Python 3.7.3|Anaconda custom (x86_64)| (default, Mar 27 2019, 22:11:17)
           </div>
           <footer>
   
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../github/" class="btn btn-neutral float-right" title="Data Access in Python">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../../preweek/python/" class="btn btn-neutral" title="Python Requirements"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
-    </div>
-  
 
   <hr/>
 
@@ -246,10 +212,6 @@ Python 3.7.3|Anaconda custom (x86_64)| (default, Mar 27 2019, 22:11:17)
           <a href="https://github.com/oceanhackweek/ohw-resources/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../../preweek/python/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../github/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
